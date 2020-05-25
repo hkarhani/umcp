@@ -1,6 +1,8 @@
 #!/bin/bash
 apt-get update && apt-get install build-essential wget zip unzip -y
 
+conda install -y python=3.7
+
 wget http://interactivebrokers.github.io/downloads/twsapi_macunix.976.01.zip
 unzip twsapi_macunix.976.01.zip -d $HOME/ && cd $HOME/IBJts/source/pythonclient && python3 setup.py build install
 
